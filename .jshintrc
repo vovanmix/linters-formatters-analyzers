@@ -1,0 +1,67 @@
+{
+  "browser": true,
+
+  "jquery": true,
+
+  "node": true,
+
+  "esversion": 6,
+
+  "camelcase": true,
+
+  "eqeqeq": true,
+
+  "indent": 2,
+
+  "latedef": true,
+
+  "maxlen": 100,
+
+  "newcap": true,
+
+  "quotmark": "single",
+
+  "strict": true,
+
+  "undef": true,
+
+  "eqnull": true,
+
+  "unused": "vars",
+
+  "esnext": true,
+
+  "globals": {
+    "describe": false,
+    "xdescribe": false,
+    "it": false,
+    "xit": false,
+    "inject": false,
+    "sinon": false,
+    "context": false,
+    "beforeEach": false,
+    "afterEach": false,
+    "before": false,
+    "after": false,
+    "expect": false,
+    "chai": false,
+    "sinon": false,
+    "module": false,
+    "angular": false,
+    "$": false,
+    "_": true,
+    "igg": false,
+    "ga": false,
+    "moment": false,
+    "__dirname": false,
+    "exports": false,
+    "process": false,
+    "require": false,
+    "gon": false,
+    "GoGoTesting": false,
+    "Go": false,
+    "console": false,
+    "global": false
+  }
+
+}
