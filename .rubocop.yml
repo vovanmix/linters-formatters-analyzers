@@ -58,12 +58,14 @@ Style/ClassAndModuleChildren:
   EnforcedStyle: nested
 
 Metrics/ClassLength:
-  Description: 'Avoid classes longer than 100 lines of code.'
-  Enabled: false
+  Description: 'Avoid classes longer than 300 lines of code.'
+  Enabled: true
+  Max: 300
 
 Metrics/ModuleLength:
-  Description: 'Avoid modules longer than 100 lines of code.'
-  Enabled: false
+  Description: 'Avoid modules longer than 300 lines of code.'
+  Enabled: true
+  Max: 300
 
 Style/ClassVars:
   Description: 'Avoid the use of class variables.'

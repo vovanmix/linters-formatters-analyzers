@@ -9,14 +9,18 @@
     "yarn": "0.18.1"
   },
   "scripts": {
-    "format": "node_modules/.bin/jsfmt ./javascript/*.js -w"
+    "format": "node_modules/.bin/jsfmt ./js/*.js -w && node_modules/.bin/tsfmt ./js/*.ts -r"
   },
   "devDependencies": {
     "esformatter-braces": "^1.2.1",
     "esformatter-limit-linebreaks": "0.0.3",
     "esformatter-quotes": "^1.1.0",
     "esformatter-semicolons": "^1.1.2",
-    "jsfmt": "^0.5.3"
+    "jsfmt": "^0.5.3",
+    "jshint": "^2.9.4",
+    "tslint": "^5.0.0",
+    "typescript": "^2.2.2",
+    "typescript-formatter": "^5.1.2"
   },
   "dependencies": {}
 }

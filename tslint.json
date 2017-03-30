@@ -1,0 +1,42 @@
+{
+  "rules": {
+    "indent": [true, "spaces"],
+    "eofline": true,
+    "no-consecutive-blank-lines": true,
+    "only-arrow-functions": true,
+    "curly": true,
+    "no-debugger": true,
+    "semicolon": [true, "always"],
+    "space-before-function-paren": [true, "always"],
+    "quotemark": [true, "single", "avoid-escape"],
+    "prefer-method-signature": true,
+    "one-line": [true, "check-catch", "check-finally", "check-else"],
+    "no-trailing-whitespace": true,
+    "no-var-keyword": true,
+    "no-unused-variable": [true],
+    "no-string-literal": true,
+    "no-eval": true,
+    "no-duplicate-variable": true,
+    "no-empty": true,
+    "new-parens": true,
+    "class-name": true,
+    "arrow-return-shorthand": [true],
+    "align": [true, "parameters", "arguments", "statements"],
+    "trailing-comma": [true, "always"],
+    "prefer-const": true,
+    "triple-equals": true,
+    "switch-default": true,
+    "cyclomatic-complexity": [true, 20],
+    "max-classes-per-file": [true, 3],
+    "max-line-length": [true, 80],
+    "max-file-line-count": [true, 300],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-operator",
+      "check-separator",
+      "check-type",
+      "check-typecast"
+    ]
+  }
+}

@@ -16,7 +16,8 @@
     "FunctionDeclarationClosingBrace": 1,
     "FunctionDeclarationOpeningBrace": 0,
     "FunctionExpressionClosingBrace": 1,
-    "FunctionExpressionOpeningBrace": 0
+    "FunctionExpressionOpeningBrace": 0,
+    "ObjectExpressionClosingBrace": 1
    }
   }
 }

@@ -6,7 +6,6 @@ var fnc = function() {
     a: 1,
     b: 'one',
     c: 'two'
-
   };
 };
 
