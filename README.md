@@ -18,3 +18,9 @@ node_modules/.bin/tsfmt ./javascript/*.ts -r
 or
 npm run format
 ```
+
+## Html / CSS / Less
+```
+./node_modules/.bin/js-beautify html/*.html -r
+beautified html/example.html
+```
