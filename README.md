@@ -1,5 +1,5 @@
 # Formatting
-##Ruby
+## Ruby
 ```
 rubocop -a
 ```
@@ -23,4 +23,10 @@ npm run format
 ```
 ./node_modules/.bin/js-beautify html/*.html -r
 beautified html/example.html
+```
+
+# Linting
+## Html
+```
+node_modules/.bin/htmlhint --config htmlhint.conf
 ```

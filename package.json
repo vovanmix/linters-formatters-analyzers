@@ -16,6 +16,7 @@
     "esformatter-limit-linebreaks": "0.0.3",
     "esformatter-quotes": "^1.1.0",
     "esformatter-semicolons": "^1.1.2",
+    "htmlhint": "^0.9.13",
     "js-beautify": "^1.6.12",
     "jsfmt": "^0.5.3",
     "jshint": "^2.9.4",
