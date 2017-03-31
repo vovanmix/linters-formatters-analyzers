@@ -1,3 +1,39 @@
+# Locat set up
+```sh
+
+npm install -g jsfmt esformatter-braces esformatter-limit-linebreaks esformatter-quotes esformatter-semicolons
+wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jsfmtrc
+
+
+gem install rubocop
+wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.rubocop.yml
+
+
+npm install -g tslint
+wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/tslint.json
+
+
+npm install -g jshint
+wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jshintrc
+
+
+wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/lint
+chmod +x ~/lint
+
+---
+
+
+
+git config pre-commit.checks "[whitespace, jshint, debugger, rubocop]"
+
+fork https://github.com/jish/pre-commit
+and add tslint and htmlhint plugins there
+
+or customize this:
+https://gist.github.com/skanev/9d4bec97d5a6825eaaf6
+
+```
+
 # Formatting
 ## Ruby
 ```
