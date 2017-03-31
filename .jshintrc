@@ -1,36 +1,29 @@
 {
   "browser": true,
-
   "jquery": true,
-
+  "curly": true,
   "node": true,
-
   "esversion": 6,
-
   "camelcase": true,
-
   "eqeqeq": true,
-
+  "freeze": true,
   "indent": 2,
-
   "latedef": true,
-
-  "maxlen": 100,
-
   "newcap": true,
-
-  "quotmark": "single",
-
-  "strict": true,
-
+  "noempty": true,
+  "evil": false,
+  "quotmark": "double",
   "undef": true,
-
   "eqnull": true,
-
   "unused": "vars",
-
-  "esnext": true,
-
+  "varstmt": true,
+  "debug": false,
+  "lastsemic": false,
+  "maxlen": 80,
+  "maxstatements": 20,
+  "maxparams": 4,
+  "maxdepth": 4,
+  "maxcomplexity": 20,
   "globals": {
     "describe": false,
     "xdescribe": false,
@@ -63,5 +56,4 @@
     "console": false,
     "global": false
   }
-
 }

@@ -8,7 +8,7 @@
     "no-debugger": true,
     "semicolon": [true, "always"],
     "space-before-function-paren": [true, "always"],
-    "quotemark": [true, "single", "avoid-escape"],
+    "quotemark": [true, "double", "avoid-escape"],
     "prefer-method-signature": true,
     "one-line": [true, "check-catch", "check-finally", "check-else"],
     "no-trailing-whitespace": true,
