@@ -1,20 +1,22 @@
 # Formatting
 ## Ruby
 ```
-rubocop -a
+rubocop -a file_name.rb
 ```
 
 ## Javascript
 http://lloiser.github.io/esformatter-visualize/
 ```
-node_modules/.bin/jsfmt ./javascript/*.js -w
+node_modules/.bin/jsfmt ./js/*.js -w
 or
 npm run format
+or
+jsfmt -w ./js/*.js
 ```
 
 ## TypeScript
 ```
-node_modules/.bin/tsfmt ./javascript/*.ts -r
+node_modules/.bin/tsfmt ./js/*.ts -r
 or
 npm run format
 ```
