@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+git diff --name-only | grep '\.rb' | xargs rubocop --config ~/.rubocop.yml
+git diff --name-only | grep '\.ts' | xargs tslint -c ~/tslint.json
+git diff --name-only | grep '\.js' | xargs jshint -c ~/.jshintrc
