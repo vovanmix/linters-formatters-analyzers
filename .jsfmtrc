@@ -8,7 +8,7 @@
   ],
   "LimitLineBreaks": 2,
   "quotes": {
-    "type": "single"
+    "type": "double"
   },
   "lineBreak": {
    "before": {
