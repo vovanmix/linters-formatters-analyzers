@@ -6,24 +6,32 @@ wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyze
 
 
 gem install rubocop
-wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.rubocop.yml
+wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.rubocop.new.yml
 
 
 npm install -g tslint
-wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/tslint.json
+wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/tslint.new.json
 
 
 npm install -g jshint
-wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jshintrc
+wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jshintrc.new
 
 
 wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/lint
 chmod +x ~/lint
+```
 
----
+# Watcher script Rubymine for formatting
+```
+~/.nvm/versions/node/v5.5.0/bin/jsfmt
+-w $FilePath$
 
+~/.rbenv/shims/rubocop
+-a $FilePath$ --config ~/.rubocop.new.yml
+```
 
-
+# TODO:
+```sh
 git config pre-commit.checks "[whitespace, jshint, debugger, rubocop]"
 
 fork https://github.com/jish/pre-commit
