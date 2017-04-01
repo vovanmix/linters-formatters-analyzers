@@ -9,8 +9,10 @@ chmod +x ~/lint_install.sh
 rm ~/lint_install.sh
 
 echo 'alias lint="~/lint"' >> ~/.zshrc
+source ~/.zshrc
 OR
 echo 'alias lint="~/lint"' >> ~/.bash_profile
+source ~/.bash_profile
 ```
 
 # Watcher script Rubymine for formatting
