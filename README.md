@@ -2,23 +2,26 @@
 ```sh
 
 npm install -g jsfmt esformatter-braces esformatter-limit-linebreaks esformatter-quotes esformatter-semicolons
-wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jsfmtrc
+wget -O ~/.jsfmtrc https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jsfmtrc
 
 
 gem install rubocop
-wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.rubocop.new.yml
+wget -O ~/.rubocop.lint.yml https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.rubocop.yml
 
 
 npm install -g tslint
-wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/tslint.new.json
+wget -O ~/tslint.lint.json https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/tslint.json
 
 
 npm install -g jshint
-wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jshintrc.new
+wget -O ~/.jshintrc.lint https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jshintrc
 
 
 wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/lint
 chmod +x ~/lint
+echo 'alias lint="~/lint"' >> ~/.zshrc
+OR
+echo 'alias lint="~/lint"' >> ~/.bash_profile
 ```
 
 # Watcher script Rubymine for formatting
@@ -27,7 +30,7 @@ chmod +x ~/lint
 -w $FilePath$
 
 ~/.rbenv/shims/rubocop
--a $FilePath$ --config ~/.rubocop.new.yml
+-a $FilePath$ --config ~/.rubocop.lint.yml
 ```
 
 # TODO:
