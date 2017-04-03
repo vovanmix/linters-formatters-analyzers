@@ -13,7 +13,7 @@ npm install -g jshint
 wget --no-cache -O ~/.jshintrc.lint https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jshintrc
 
 npm install -g eslint eslint-plugin-import
-wget --no-cache -O ~/.eslintrc.lint https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.eslintrc
+wget --no-cache -O ~/.eslintrc.lint.json https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.eslintrc.json
 
 wget --no-cache -O ~/lint https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/lint
 chmod +x ~/lint

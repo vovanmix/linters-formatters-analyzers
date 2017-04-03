@@ -2,5 +2,5 @@
 git diff --name-only | grep '\.rb' | xargs rubocop --config ~/.rubocop.lint.yml
 git diff --name-only | grep '\.ts' | xargs tslint -c ~/tslint.lint.json
 git diff --name-only | grep '\.js' | xargs jshint -c ~/.jshintrc.lint
-git diff --name-only | grep '\.ts' | xargs eslint -c ~/.eslintrc.lint
-git diff --name-only | grep '\.js' | xargs eslint -c ~/.eslintrc.lint
+git diff --name-only | grep '\.ts' | xargs eslint -c ~/.eslintrc.lint.json
+git diff --name-only | grep '\.js' | xargs eslint -c ~/.eslintrc.lint.json

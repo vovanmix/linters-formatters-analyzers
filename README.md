@@ -45,6 +45,8 @@ rubocop -a file_name.rb
 ## Javascript
 http://lloiser.github.io/esformatter-visualize/
 ```
+eslint -c config --fix js/*
+or
 node_modules/.bin/jsfmt ./js/*.js -w
 or
 npm run format
@@ -54,6 +56,8 @@ jsfmt -w ./js/*.js
 
 ## TypeScript
 ```
+eslint -c config --fix js/*
+or
 node_modules/.bin/tsfmt ./js/*.ts -r
 or
 npm run format
