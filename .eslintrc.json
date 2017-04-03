@@ -8,7 +8,9 @@
         "quotes": ["error", "double"],
         "max-lines": ["error", 300],
         "no-multiple-empty-lines": ["error", {"max": 1, "maxBOF": 0, "maxEOF": 1}],
-        "max-nested-callbacks": ["error", 3],
-        "object-curly-newline": ["error", { "minProperties": 3 }]
+        "max-nested-callbacks": ["error", 4],
+        "object-curly-newline": ["error", { "minProperties": 3 }],
+        "max-len": ["error", 80],
+        "max-params": ["error", 4]
     }
 }

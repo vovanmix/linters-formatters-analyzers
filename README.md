@@ -17,8 +17,8 @@ source ~/.bash_profile
 
 # Watcher script Rubymine for formatting
 ```
-~/.nvm/versions/node/v5.5.0/bin/jsfmt
--w $FilePath$
+~/.nvm/versions/node/v5.5.0/bin/eslint
+--fix $FilePath$ -c ~/.eslintrc.lint.json
 
 ~/.rbenv/shims/rubocop
 -a $FilePath$ --config ~/.rubocop.lint.yml
