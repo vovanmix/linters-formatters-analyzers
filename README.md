@@ -1,6 +1,6 @@
 # Locat set up
 ```sh
-wget --no-cache -O ~/lint_install.sh https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/install.sh
+wget --no-cache --cache=off -O ~/lint_install.sh https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/install.sh
 
 chmod +x ~/lint_install.sh
 
