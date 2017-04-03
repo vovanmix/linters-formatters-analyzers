@@ -1,0 +1,14 @@
+{
+    "extends": "airbnb",
+    "installedESLint": true,
+    "plugins": [
+        "import"
+    ],
+    "rules": {
+        "quotes": ["error", "double"],
+        "max-lines": ["error", 300],
+        "no-multiple-empty-lines": ["error", {"max": 1, "maxBOF": 0, "maxEOF": 1}],
+        "max-nested-callbacks": ["error", 3],
+        "object-curly-newline": ["error", { "minProperties": 3 }]
+    }
+}
