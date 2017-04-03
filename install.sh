@@ -12,5 +12,8 @@ wget -O ~/tslint.lint.json https://raw.githubusercontent.com/vovanmix/linters-fo
 npm install -g jshint
 wget -O ~/.jshintrc.lint https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jshintrc
 
-wget -P ~/ https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/lint
+npm install -g eslint eslint-plugin-import
+wget -O ~/.eslintrc.lint https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.eslintrc
+
+wget -O ~/lint https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/lint
 chmod +x ~/lint

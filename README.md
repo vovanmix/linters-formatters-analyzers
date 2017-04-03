@@ -70,3 +70,9 @@ beautified html/example.html
 ```
 node_modules/.bin/htmlhint --config htmlhint.conf
 ```
+## Javascript
+Jshint for code quality, eslint for code style
+```
+./node_modules/.bin/eslint -c <path-to-config> --fix <path-to-current-file>
+./node_modules/.bin/eslint --fix js/*
+```
