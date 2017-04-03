@@ -58,6 +58,9 @@ Similar to manual running formatting scripts described above, we need to specify
 ~/.nvm/versions/node/v5.5.0/bin/eslint
 --fix $FilePath$ -c ~/.eslintrc.lint.json
 
+~/.nvm/versions/node/v5.5.0/bin/eslint
+--fix $FilePath$ -c /Users/indiegogo/.eslintrc.lint.json
+
 ~/.rbenv/shims/rubocop
 -a $FilePath$ --config ~/.rubocop.lint.yml
 ```
