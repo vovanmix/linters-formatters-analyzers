@@ -15,7 +15,45 @@ echo 'alias lint="~/lint"' >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
-# Watcher script Rubymine for formatting
+# Run linting before commit
+it will lint only changed files
+```
+lint
+```
+
+# Auto format files
+We need some tweaks because linter libs are currently installed globally and we don't want to mess with the existing config:
+## Javascript and TypeScript
+Here we need to look up the path to global packages and use it. The example shows setup using nvm.
+```
+> which node
+  /Users/xxx/.nvm/versions/node/v5.5.0/bin/node
+> /Users/xxx/.nvm/versions/node/v5.5.0/bin/eslint -c ~/.eslintrc.lint.json --fix path-to-file.js
+```
+## Ruby
+Here we need to use global set up of Rubocop
+```
+> which rubocop
+  /Users/xxx/.rbenv/shims/rubocop
+> /Users/xxx/.rbenv/shims/rubocop --config ~/.rubocop.lint.yml -a path-to-file.rb
+```
+
+# IDE built in linting
+### Rubymine
+In settings under `Languages & Frameworks / Javascript / Code Quality Tools` configure JsHint and EsLint. Enable and set a
+#### JSHint
+custom configuration file: `/Users/indiegogo/.jshintrc.lint`
+#### EsLint
+custom configuration file: `/Users/indiegogo/.eslintrc.lint.json`
+Node Interpreter: `~/.nvm/versions/node/v5.5.0/bin/node`
+Eslint Package: `~/.nvm/versions/node/v5.5.0/lib/node_modules/eslint`
+#### Rubocop
+I wasn't able to make it work with config file out of the project directory.
+
+# Watcher script Rubymine for auto formatting
+Using `File Watchers` plugin.
+
+Similar to manual running formatting scripts described above, we need to specify the correct path to the executable.
 ```
 ~/.nvm/versions/node/v5.5.0/bin/eslint
 --fix $FilePath$ -c ~/.eslintrc.lint.json
