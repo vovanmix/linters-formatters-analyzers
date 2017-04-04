@@ -4,7 +4,7 @@ AllCops:
 
 Style/AccessorMethodName:
   Description: Check the naming of accessor methods for get_/set_.
-  Enabled: false
+  Enabled: true
 
 Style/Alias:
   Description: 'Use alias_method instead of alias.'
@@ -35,12 +35,31 @@ Style/AsciiIdentifiers:
 Style/Attr:
   Description: 'Checks for uses of Module#attr.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#attr'
-  Enabled: false
+  Enabled: true
 
-Metrics/BlockNesting:
-  Description: 'Avoid excessive block nesting'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#three-is-the-number-thou-shalt-count'
-  Enabled: false
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/MissingElse:
+  EnforcedStyle: both
+
+Style/MultilineHashBraceLayout:
+  EnforcedStyle: symmetrical
+
+Style/MultilineMethodCallBraceLayout:
+  EnforcedStyle: symmetrical
+
+Style/MultilineArrayBraceLayout:
+  EnforcedStyle: symmetrical
+
+Style/MultilineMethodDefinitionBraceLayout:
+  EnforcedStyle: symmetrical
+
+Style/IndentHash:
+  EnforcedStyle: align_braces
+
+Style/IndentArray:
+  EnforcedStyle: align_brackets
 
 Style/CaseEquality:
   Description: 'Avoid explicit use of the case equality operator(===).'
@@ -57,16 +76,6 @@ Style/ClassAndModuleChildren:
   Enabled: true
   EnforcedStyle: nested
 
-Metrics/ClassLength:
-  Description: 'Avoid classes longer than 300 lines of code.'
-  Enabled: true
-  Max: 300
-
-Metrics/ModuleLength:
-  Description: 'Avoid modules longer than 300 lines of code.'
-  Enabled: true
-  Max: 300
-
 Style/ClassVars:
   Description: 'Avoid the use of class variables.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-class-vars'
@@ -75,7 +84,7 @@ Style/ClassVars:
 Style/CollectionMethods:
   Enabled: true
   PreferredMethods:
-    find: detect
+    detect: find
     inject: reduce
     collect: map
     find_all: select
@@ -90,22 +99,6 @@ Style/CommentAnnotation:
                  Checks formatting of special comments
                  (TODO, FIXME, OPTIMIZE, HACK, REVIEW).
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#annotate-keywords'
-  Enabled: false
-
-Metrics/AbcSize:
-  Description: >-
-                 A calculated magnitude based on number of assignments,
-                 branches, and conditions.
-  Enabled: false
-
-Metrics/CyclomaticComplexity:
-  Description: >-
-                 A complexity metric that is strongly correlated to the number
-                 of test cases needed to validate a method.
-  Enabled: false
-
-Rails/Delegate:
-  Description: 'Prefer delegate method for delegations.'
   Enabled: false
 
 Style/Documentation:
@@ -171,12 +164,12 @@ Style/GlobalVars:
 Style/GuardClause:
   Description: 'Check for conditionals that can be replaced with guard clauses'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-nested-conditionals'
-  Enabled: false
+  Enabled: true
 
 Style/IfWithSemicolon:
   Description: 'Do not use if x; .... Use the ternary operator instead.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-semicolon-ifs'
-  Enabled: false
+  Enabled: true
 
 Style/InlineComment:
   Description: 'Avoid inline comments.'
@@ -185,33 +178,18 @@ Style/InlineComment:
 Style/Lambda:
   Description: 'Use the new lambda literal syntax for single-line blocks.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#lambda-multi-line'
-  Enabled: false
+  Enabled: true
 
 Style/LambdaCall:
   Description: 'Use lambda.call(...) instead of lambda.(...).'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#proc-call'
-  Enabled: false
+  Enabled: true
 
 Style/LineEndConcatenation:
   Description: >-
                  Use \ instead of + or << to concatenate two string literals at
                  line end.
   Enabled: false
-
-Metrics/LineLength:
-  Description: 'Limit lines to 80 characters.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#80-character-limits'
-  Max: 80
-
-Metrics/MethodLength:
-  Description: 'Avoid methods longer than 10 lines of code.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#short-methods'
-  Enabled: true
-  Max: 20
-
-Metrics/ParameterLists:
-  Enabled: true
-  Max: 4
 
 Style/ModuleFunction:
   Description: 'Checks for usage of `extend self` in modules.'
@@ -308,7 +286,7 @@ Style/TrailingCommaInLiteral:
 Style/TrivialAccessors:
   Description: 'Prefer attr_* methods to trivial readers/writers.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#attr_family'
-  Enabled: false
+  Enabled: true
 
 Style/VariableInterpolation:
   Description: >-
@@ -332,7 +310,7 @@ Style/WhileUntilModifier:
 Style/WordArray:
   Description: 'Use %w or %W for arrays of words.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-w'
-  Enabled: false
+  Enabled: true
 
 # Lint
 
@@ -371,7 +349,7 @@ Lint/DeprecatedClassMethods:
 
 Lint/DuplicatedKey:
   Description: 'Check for duplicate keys in hash literals.'
-  Enabled: false
+  Enabled: true
 
 Lint/EachWithObjectArgument:
   Description: 'Check for immutable argument given to each_with_object.'
@@ -388,7 +366,7 @@ Lint/FormatParameterMismatch:
 Lint/HandleExceptions:
   Description: "Don't suppress exception."
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#dont-hide-exceptions'
-  Enabled: false
+  Enabled: true
 
 Lint/InvalidCharacterLiteral:
   Description: >-
@@ -558,20 +536,53 @@ Rails/Validation:
   Description: 'Use validates :attribute, hash of validations.'
   Enabled: false
 
-Style/MultilineHashBraceLayout:
-  EnforcedStyle: same_line
+Rails/Delegate:
+  Description: 'Prefer delegate method for delegations.'
+  Enabled: true
 
-Style/MultilineMethodCallBraceLayout:
-  EnforcedStyle: same_line
+# Metrics
 
-Style/MultilineArrayBraceLayout:
-  EnforcedStyle: same_line
+Metrics/AbcSize:
+  Description: >-
+                 A calculated magnitude based on number of assignments,
+                 branches, and conditions.
+  Enabled: false
 
-MultilineMethodDefinitionBraceLayout:
-  EnforcedStyle: same_line
+Metrics/CyclomaticComplexity:
+  Description: >-
+                 A complexity metric that is strongly correlated to the number
+                 of test cases needed to validate a method.
+  Enabled: true
+  Max: 20
 
-Style/IndentHash:
-  EnforcedStyle: align_braces
+Metrics/BlockNesting:
+  Description: 'Avoid excessive block nesting'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#three-is-the-number-thou-shalt-count'
+  Enabled: true
+  CountBlocks: true
+  Max: 3
 
-Style/IndentArray:
-  EnforcedStyle: align_brackets
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 300 lines of code.'
+  Enabled: true
+  Max: 300
+
+Metrics/ModuleLength:
+  Description: 'Avoid modules longer than 300 lines of code.'
+  Enabled: true
+  Max: 300
+
+Metrics/LineLength:
+  Description: 'Limit lines to 80 characters.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#80-character-limits'
+  Max: 80
+
+Metrics/MethodLength:
+  Description: 'Avoid methods longer than 10 lines of code.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#short-methods'
+  Enabled: true
+  Max: 20
+
+Metrics/ParameterLists:
+  Enabled: true
+  Max: 4
