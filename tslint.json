@@ -3,7 +3,7 @@
     "indent": [true, "spaces"],
     "eofline": true,
     "no-consecutive-blank-lines": true,
-    "only-arrow-functions": true,
+    "only-arrow-functions": [true, "allow-declarations", "allow-named-functions"],
     "curly": true,
     "no-debugger": true,
     "semicolon": [true, "always"],
