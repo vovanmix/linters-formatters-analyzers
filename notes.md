@@ -17,3 +17,6 @@ These rules are good but were disabled for legacy code:
 - camelcase
 - consistent-return
 - no-use-before-define
+
+These rules are controversial:
+- no-extra-boolean-cast
