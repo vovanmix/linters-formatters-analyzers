@@ -16,3 +16,4 @@ These rules are good but were disabled for legacy code:
 - no-undef
 - camelcase
 - consistent-return
+- no-use-before-define
