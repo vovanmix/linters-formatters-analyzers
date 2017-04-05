@@ -6,13 +6,13 @@ wget --no-cache --cache=off -O ~/.jsfmtrc https://raw.githubusercontent.com/vova
 gem install rubocop
 wget --no-cache --cache=off -O ~/.rubocop.lint.yml https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.rubocop.yml
 
-npm install -g tslint
+npm install -g tslint typescript@2.2.2
 wget --no-cache --cache=off -O ~/tslint.lint.json https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/tslint.json
 
 npm install -g jshint
 wget --no-cache --cache=off -O ~/.jshintrc.lint https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.jshintrc
 
-npm install -g eslint eslint-plugin-import eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-react typescript-eslint-parser
+npm install -g eslint eslint-plugin-import eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-react typescript-eslint-parser@2.1.0 typescript@2.2.2
 wget --no-cache --cache=off -O ~/.eslintrc.lint.json https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/.eslintrc.json
 
 wget --no-cache --cache=off -O ~/lint https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/lint
