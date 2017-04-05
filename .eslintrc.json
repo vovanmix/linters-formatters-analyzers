@@ -6,8 +6,6 @@
         "import"
     ],
     "rules": {
-        "import/no-unresolved": "off",
-        "import/extensions": "off",
         "quotes": ["error", "double"],
         "max-lines": ["error", 300],
         "no-multiple-empty-lines": ["error", {"max": 1, "maxBOF": 0, "maxEOF": 1}],
@@ -15,13 +13,18 @@
         "object-curly-newline": ["error", { "multiline": true }],
         "max-len": ["error", 80],
         "max-params": ["error", 4],
-        "no-undef": "off",
         "space-before-function-paren": ["error", "always"],
         "comma-dangle": ["error", "never"],
         "key-spacing": ["error", { "beforeColon": false, "afterColon": true,  "mode": "strict" }],
         "no-multi-spaces" : ["error", {"exceptions": {"Property": true, "VariableDeclarator": true, "ImportDeclaration": true}}],
         "camelcase" : "off",
+        "no-undef": "off",
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
         "global-require": "off",
-        "no-param-reassign": "off"
+        "no-param-reassign": "off",
+        "class-methods-use-this": "off",
+        "no-useless-constructor": "off",
+        "no-unused-vars": "off"
     }
 }
