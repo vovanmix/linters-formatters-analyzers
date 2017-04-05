@@ -21,3 +21,4 @@ These rules are good but were disabled for legacy code:
 These rules are controversial:
 - no-extra-boolean-cast
 - no-mixed-operators
+- import/prefer-default-export
