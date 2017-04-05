@@ -15,3 +15,4 @@ These rules were disabled because of the Webpack config:
 These rules are good but were disabled for legacy code:
 - no-undef
 - camelcase
+- consistent-return
