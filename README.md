@@ -42,15 +42,35 @@ Here we need to use global set up of Rubocop
 ### Rubymine
 In settings under `Languages & Frameworks / Javascript / Code Quality Tools` configure JsHint and EsLint. Enable and set a
 #### JSHint
-custom configuration file: `/Users/indiegogo/.jshintrc.lint`
+custom configuration file: `/Users/xxx/.jshintrc.lint`
 #### EsLint
-custom configuration file: `/Users/indiegogo/.eslintrc.lint.json`
+custom configuration file: `/Users/xxx/.eslintrc.lint.json`
 Node Interpreter: `~/.nvm/versions/node/v5.5.0/bin/node`
 Eslint Package: `~/.nvm/versions/node/v5.5.0/lib/node_modules/eslint`
 #### Rubocop
 I wasn't able to make it work with config file out of the project directory.
 
-# Watcher script Rubymine for auto formatting
+# External tools for RubyMine for manual formatting
+## Eslint xformat
+```
+/Users/xxx/.nvm/versions/node/v5.5.0/bin/eslint
+-c /Users/xxx/.eslintrc.lint.json --fix $FilePath$
+$ProjectFileDir$
+```
+## Rubocop xformat
+```
+/Users/xxx/.rbenv/shims/rubocop
+--config /Users/xxx/.rubocop.lint.yml -a $FilePath$
+$ProjectFileDir$
+```
+## Tslint xformat
+```
+/Users/xxx/.nvm/versions/node/v5.5.0/bin/tslint
+-c /Users/xxx/tslint.lint.json --fix $FilePath$
+$ProjectFileDir$
+```
+
+# Watcher script Rubymine for auto formatting (this is unstable!)
 Using `File Watchers` plugin.
 
 Similar to manual running formatting scripts described above, we need to specify the correct path to the executable.
@@ -59,7 +79,7 @@ Similar to manual running formatting scripts described above, we need to specify
 --fix $FilePath$ -c ~/.eslintrc.lint.json
 
 ~/.nvm/versions/node/v5.5.0/bin/eslint
---fix $FilePath$ -c /Users/indiegogo/.eslintrc.lint.json
+--fix $FilePath$ -c /Users/xxx/.eslintrc.lint.json
 
 ~/.rbenv/shims/rubocop
 -a $FilePath$ --config ~/.rubocop.lint.yml
