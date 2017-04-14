@@ -22,25 +22,48 @@ lint
 ```
 
 # IDE built in linting
+Eslint is used generally for formatting. Tslint - for Typescript-specific settings.
 ### Rubymine
-In settings under `Languages & Frameworks / Javascript / Code Quality Tools` configure JsHint and EsLint. Enable and set a
 #### JSHint
-custom configuration file: `/Users/xxx/.jshintrc.lint`
+`Settings -> Languages And Frameworks -> JavaScript -> Code Quality Tools -> JSHint`
+
+Enable
+
+Use Config Files
+
+Custom configuration file: `/Users/xxx/.jshintrc.lint`
 #### EsLint
-Disable the built in linter. Install the `ESLint` plugin.
+`Settings -> Languages And Frameworks -> JavaScript -> Code Quality Tools -> ESLint`
+Disable (the built in linter)
+
+Install the `ESLint` plugin.
+
+`Settings -> Other Settings -> ESLint`
 
 Node Interpreter: `~/.nvm/versions/node/v5.5.0/bin/node`
 
-Eslint bin: `/~/.nvm/versions/node/v5.5.0/bin/eslint`
+ESLint bin: `/~/.nvm/versions/node/v5.5.0/bin/eslint`
 
 Custom configuration file: `~/.eslintrc.lint.json`
 
 Extensions: `.ts,.js`
+#### TsLint
+`Settings -> Languages And Frameworks -> TypeScript -> TSLint`
+
+Enable
+
+Node Interpreter: `~/.nvm/versions/node/v5.5.0/bin/node`
+
+TSLint package: `~/.nvm/versions/node/v5.5.0/lib/node_modules/tslint`
+
+Configuration file: `/~/tslint.lint.json`
+
 #### Rubocop
 I wasn't able to make it work with config file out of the project directory. The only way for now is to temporary copy the config file from the user dir to the project dir and reset it afterwards.
 ```
 cp ~/.rubocop.lint.yml ~/project-dir/.rubocop.yml
 ```
+And enable RubyMine built in rubocop linting.
 
 # Manually auto format files
 We need some tweaks because linter libs are currently installed globally and we don't want to mess with the existing config:
@@ -50,6 +73,7 @@ Here we need to look up the path to global packages and use it. The example show
 > which node
   /Users/xxx/.nvm/versions/node/v5.5.0/bin/node
 > /Users/xxx/.nvm/versions/node/v5.5.0/bin/eslint -c ~/.eslintrc.lint.json --fix path-to-file.js
+> /Users/xxx/.nvm/versions/node/v5.5.0/bin/tslint -c ~/tslint.lint.json --fix path-to-file.js
 ```
 ## Ruby
 Here we need to use global set up of Rubocop
@@ -60,6 +84,9 @@ Here we need to use global set up of Rubocop
 ```
 
 # External tools for RubyMine for manual formatting
+Set up them in settings -> Tools -> External Tools using settings described below to fill in `Name`, `Program`, `Parameters`, `Working dir` fields respectively.
+
+Run them with `cmd + shift + A` and typing the first chars of the name.
 ## Eslint xformat
 ```
 /Users/xxx/.nvm/versions/node/v5.5.0/bin/eslint
