@@ -1,4 +1,4 @@
-# Locat set up
+# Local set up
 ```sh
 wget --no-cache --cache=off -O ~/lint_install.sh https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/install.sh
 
@@ -21,7 +21,28 @@ it will lint only changed files
 lint
 ```
 
-# Auto format files
+# IDE built in linting
+### Rubymine
+In settings under `Languages & Frameworks / Javascript / Code Quality Tools` configure JsHint and EsLint. Enable and set a
+#### JSHint
+custom configuration file: `/Users/xxx/.jshintrc.lint`
+#### EsLint
+Disable the built in linter. Install the `ESLint` plugin.
+
+Node Interpreter: `~/.nvm/versions/node/v5.5.0/bin/node`
+
+Eslint bin: `/~/.nvm/versions/node/v5.5.0/bin/eslint`
+
+Custom configuration file: `~/.eslintrc.lint.json`
+
+Extensions: `.ts,.js`
+#### Rubocop
+I wasn't able to make it work with config file out of the project directory. The only way for now is to temporary copy the config file from the user dir to the project dir and reset it afterwards.
+```
+cp ~/.rubocop.lint.yml ~/project-dir/.rubocop.yml
+```
+
+# Manually auto format files
 We need some tweaks because linter libs are currently installed globally and we don't want to mess with the existing config:
 ## Javascript and TypeScript
 Here we need to look up the path to global packages and use it. The example shows setup using nvm.
@@ -37,18 +58,6 @@ Here we need to use global set up of Rubocop
   /Users/xxx/.rbenv/shims/rubocop
 > /Users/xxx/.rbenv/shims/rubocop --config ~/.rubocop.lint.yml -a path-to-file.rb
 ```
-
-# IDE built in linting
-### Rubymine
-In settings under `Languages & Frameworks / Javascript / Code Quality Tools` configure JsHint and EsLint. Enable and set a
-#### JSHint
-custom configuration file: `/Users/xxx/.jshintrc.lint`
-#### EsLint
-custom configuration file: `/Users/xxx/.eslintrc.lint.json`
-Node Interpreter: `~/.nvm/versions/node/v5.5.0/bin/node`
-Eslint Package: `~/.nvm/versions/node/v5.5.0/lib/node_modules/eslint`
-#### Rubocop
-I wasn't able to make it work with config file out of the project directory.
 
 # External tools for RubyMine for manual formatting
 ## Eslint xformat
