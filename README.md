@@ -21,6 +21,21 @@ it will lint only changed files
 lint
 ```
 
+# Executables path
+We need to look up the path to global packages. Use these paths later in configurations later.
+## Javascript
+The example shows setup using nvm.
+```
+> which node
+  /Users/xxx/.nvm/versions/node/v5.5.0/bin/node
+```
+## Ruby
+```
+> which rubocop
+  /Users/xxx/.rbenv/shims/rubocop
+```
+Also, replace xxx with your user name.
+
 # IDE built in linting
 Eslint is used generally for formatting. Tslint - for Typescript-specific settings.
 ### Rubymine
@@ -40,11 +55,11 @@ Install the `ESLint` plugin.
 
 `Settings -> Other Settings -> ESLint`
 
-Node Interpreter: `~/.nvm/versions/node/v5.5.0/bin/node`
+Node Interpreter: `/Users/xxx/.nvm/versions/node/v5.5.0/bin/node`
 
-ESLint bin: `/~/.nvm/versions/node/v5.5.0/bin/eslint`
+ESLint bin: `/Users/xxx/.nvm/versions/node/v5.5.0/bin/eslint`
 
-Custom configuration file: `~/.eslintrc.lint.json`
+Custom configuration file: `/Users/xxx/.eslintrc.lint.json`
 
 Extensions: `.ts,.js`
 #### TsLint
@@ -52,11 +67,11 @@ Extensions: `.ts,.js`
 
 Enable
 
-Node Interpreter: `~/.nvm/versions/node/v5.5.0/bin/node`
+Node Interpreter: `/Users/xxx/.nvm/versions/node/v5.5.0/bin/node`
 
-TSLint package: `~/.nvm/versions/node/v5.5.0/lib/node_modules/tslint`
+TSLint package: `/Users/xxx/.nvm/versions/node/v5.5.0/lib/node_modules/tslint`
 
-Configuration file: `/~/tslint.lint.json`
+Configuration file: `/Users/xxx/tslint.lint.json`
 
 #### Rubocop
 I wasn't able to make it work with config file out of the project directory. The only way for now is to temporary copy the config file from the user dir to the project dir and reset it afterwards.
