@@ -80,6 +80,8 @@ cp ~/.rubocop.lint.yml ~/project-dir/.rubocop.yml
 ```
 And enable RubyMine built in rubocop linting.
 
+Do not commit this rubocop file, keep it unstaged for now!
+
 # Manually auto format files
 We need some tweaks because linter libs are currently installed globally and we don't want to mess with the existing config:
 ## Javascript and TypeScript
@@ -100,6 +102,12 @@ Here we need to use global set up of Rubocop
 
 # External tools for RubyMine for manual formatting
 Set up them in settings -> Tools -> External Tools using settings described below to fill in `Name`, `Program`, `Parameters`, `Working dir` fields respectively.
+
+Uncheck `Open Console` in each of them.
+
+Be careful, Eslint formatter can break code (remove parts of it, or duplicate it) in big complex files due to unknown bug, especially if there's a lot of function -> arrow function fixes and object reformatting involved. To avoid it, fix these errors manually and call format then.
+
+It will be great if somebody could find out the solid way to reproduce this bug, and file an issue on Eslint github repo!
 
 Run them with `cmd + shift + A` and typing the first chars of the name.
 ## Eslint xformat
