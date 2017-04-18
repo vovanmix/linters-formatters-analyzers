@@ -129,6 +129,15 @@ $ProjectFileDir$
 $ProjectFileDir$
 ```
 
+# Loosening the rules temporarily
+## Eslint
+There's a way to disable/change special ESlint rules in certain files. For the issues that you told me about, with line length and params count, add this at the beginning of a file:
+```
+/* eslint max-len: ["error", 120] */
+/* eslint max-params: ["error", 6], */
+```
+It will change the rules just for this file.
+
 # Watcher script Rubymine for auto formatting (this is unstable!)
 Using `File Watchers` plugin.
 
