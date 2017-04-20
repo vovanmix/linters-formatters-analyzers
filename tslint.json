@@ -28,7 +28,7 @@
     "switch-default": true,
     "cyclomatic-complexity": [true, 20],
     "max-classes-per-file": [true, 3],
-    "max-line-length": [true, 80],
+    "max-line-length": [true, 95],
     "max-file-line-count": [true, 300],
     "whitespace": [
       true,
