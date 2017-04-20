@@ -7,7 +7,6 @@
     "curly": true,
     "no-debugger": true,
     "semicolon": [true, "always"],
-    "space-before-function-paren": [true, "always"],
     "quotemark": [true, "double", "avoid-escape"],
     "prefer-method-signature": true,
     "one-line": [true, "check-catch", "check-finally", "check-else"],
