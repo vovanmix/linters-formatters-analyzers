@@ -15,7 +15,6 @@
         "max-params": ["error", 4],
         "indent": ["error", 2, {
             "FunctionDeclaration": {"parameters": "first"},
-            "VariableDeclarator": { "var": 2, "let": 2, "const": 3 },
             "CallExpression": {"arguments": "first"},
             "MemberExpression": 1,
             "SwitchCase": 1
