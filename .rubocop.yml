@@ -555,6 +555,8 @@ Metrics/AbcSize:
                  A calculated magnitude based on number of assignments,
                  branches, and conditions.
   Enabled: false
+  Exclude:
+    - spec/**/*
 
 Metrics/CyclomaticComplexity:
   Description: >-
@@ -562,6 +564,8 @@ Metrics/CyclomaticComplexity:
                  of test cases needed to validate a method.
   Enabled: true
   Max: 20
+  Exclude:
+    - spec/**/*
 
 Metrics/BlockNesting:
   Description: 'Avoid excessive block nesting'
@@ -569,16 +573,28 @@ Metrics/BlockNesting:
   Enabled: true
   CountBlocks: true
   Max: 3
+  Exclude:
+    - spec/**/*
+
+Metrics/BlockLength
+  Enabled: true
+  Max: 25
+  Exclude:
+    - spec/**/*
 
 Metrics/ClassLength:
   Description: 'Avoid classes longer than 300 lines of code.'
   Enabled: true
   Max: 300
+  Exclude:
+    - spec/**/*
 
 Metrics/ModuleLength:
   Description: 'Avoid modules longer than 300 lines of code.'
   Enabled: true
   Max: 300
+  Exclude:
+    - spec/**/*
 
 Metrics/LineLength:
   Description: 'Limit lines to 95 characters.'
@@ -591,7 +607,11 @@ Metrics/MethodLength:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#short-methods'
   Enabled: true
   Max: 20
+  Exclude:
+    - spec/**/*
 
 Metrics/ParameterLists:
   Enabled: true
   Max: 4
+  Exclude:
+    - spec/**/*
