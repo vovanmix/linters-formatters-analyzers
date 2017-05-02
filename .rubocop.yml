@@ -576,7 +576,7 @@ Metrics/BlockNesting:
   Exclude:
     - spec/**/*
 
-Metrics/BlockLength
+Metrics/BlockLength:
   Enabled: true
   Max: 25
   Exclude:
