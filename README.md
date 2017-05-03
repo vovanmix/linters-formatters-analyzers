@@ -1,3 +1,6 @@
+# TODO
+Think of integrating https://github.com/markstory/lint-review
+
 # Local set up
 ```sh
 wget --no-cache --cache=off -O ~/lint_install.sh https://raw.githubusercontent.com/vovanmix/linters-formatters-analyzers/master/install.sh
