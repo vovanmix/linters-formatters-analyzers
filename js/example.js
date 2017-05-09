@@ -4,7 +4,7 @@ const fnc = function () {
   const b = {
     a: 1,
     b: "one",
-    c: "two",
+    c: "two"
   };
 };
 

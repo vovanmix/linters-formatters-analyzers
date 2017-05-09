@@ -27,6 +27,7 @@
     "jshint": "^2.9.4",
     "tslint": "^5.0.0",
     "typescript": "^2.2.2",
+    "typescript-eslint-parser": "^2.1.0",
     "typescript-formatter": "^5.1.2"
   },
   "dependencies": {}

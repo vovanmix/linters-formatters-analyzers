@@ -313,9 +313,7 @@ Style/WordArray:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-w'
   Enabled: true
 
-# Layout
-
-Layout/MultilineMethodCallIndentation:
+Style/MultilineMethodCallIndentation:
   Description: >-
                  Checks indentation of method calls with the dot operator
                  that span more than one line.
