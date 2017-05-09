@@ -38,6 +38,7 @@
     "no-unused-vars": "off",
     "consistent-return": "off",
     "no-use-before-define": "off",
-    "jsx-a11y/img-has-alt": "off"
+    "jsx-a11y/img-has-alt": "off",
+    "no-else-return": "off"
   }
 }
