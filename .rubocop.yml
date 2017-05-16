@@ -62,11 +62,11 @@ Style/MultilineMethodDefinitionBraceLayout:
   Enabled: true
 
 Style/IndentHash:
-  EnforcedStyle: align_braces
+  EnforcedStyle: special_inside_parentheses
   Enabled: true
 
 Style/IndentArray:
-  EnforcedStyle: align_brackets
+  EnforcedStyle: special_inside_parentheses
   Enabled: true
 
 Style/CaseEquality:
@@ -320,6 +320,16 @@ Style/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented_relative_to_receiver
 
+Style/RedundantSelf:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: true
+  EnforcedStyle: empty_lines
+
+Style/MultilineIfModifier:
+  Enabled: false
+
 # Lint
 
 Lint/AmbiguousOperator:
@@ -439,6 +449,9 @@ Lint/Void:
   Description: 'Possible use of operator/literal/variable in void context.'
   Enabled: false
 
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
 # Performance
 
 Performance/CaseWhenSplat:
@@ -551,10 +564,8 @@ Rails/Delegate:
 # Metrics
 
 Metrics/AbcSize:
-  Description: >-
-                 A calculated magnitude based on number of assignments,
-                 branches, and conditions.
-  Enabled: false
+  Enabled: true
+  Max: 15
   Exclude:
     - spec/**/*
 
@@ -563,7 +574,13 @@ Metrics/CyclomaticComplexity:
                  A complexity metric that is strongly correlated to the number
                  of test cases needed to validate a method.
   Enabled: true
-  Max: 20
+  Max: 6
+  Exclude:
+    - spec/**/*
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Max: 7
   Exclude:
     - spec/**/*
 
